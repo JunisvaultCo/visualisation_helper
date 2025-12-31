@@ -8,6 +8,7 @@
 */
 
 
+let startTime;
 let size_x;
 let size_y;
 let matrix;
@@ -101,6 +102,7 @@ function hide_show() {
 	show.style.visibility = "hidden";
 	question.style.visibility = "visible";
 	qc = 0;
+	startTime = new Date();
 	generate_question();
 }
 
@@ -118,6 +120,7 @@ function answer_question() {
 	} else {
 		choose.style.visibility = "visible";
 		question.style.visibility = "hidden";
+		foot.innerText = "Last game: " + (qc - 1) + " questions in " + (((new Date()) - startTime) / 1000);
 	}
 
 }
