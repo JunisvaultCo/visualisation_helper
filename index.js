@@ -100,6 +100,7 @@ function draw_show() {
 function hide_show() {
 	show.style.visibility = "hidden";
 	question.style.visibility = "visible";
+	qc = 0;
 	generate_question();
 }
 
